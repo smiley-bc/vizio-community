@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Vizio Community | Tech Innovators & Creators Network</title>
+  <meta name="description" content="Vizio Community: Where tech innovators & creators collaborate. Discover our story, values, and the team behind this growing technology hub.">
+  <meta name="keywords" content="tech community, technology hub, software developers, designers, entrepreneurs, startup community, tech meetups">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="About Vizio Community | Tech Innovators Network">
+  <meta property="og:description" content="Learn about our mission to connect tech innovators and creators worldwide">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://yourdomain.com/about">
+  <link rel="alternate" hreflang="en" href="https://yourdomain.com/about">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Critical CSS for above-the-fold content */
+    .navbar, .hero { opacity: 0; }
+    .loaded .navbar, .loaded .hero { 
+      opacity: 1;
+      transition: opacity 0.3s ease-out;
+    }
+    /* Rest of existing CSS... */
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="logo_369170_1752171749.jpg" alt="Vizio Community Logo">
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="products.html">Products</a>
+        <a href="community.html">Community</a>
+        <button class="cta-button">Join Now</button>
+      </div>
+      <button class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero about-hero">
+    <div class="container">
+      <h1>About <span>Vizio Community</span></h1>
+      <p>A tech hub where innovators share dreams and passions.</p>
+      <div class="hero-buttons">
+        <a href="#our-story" class="btn-primary">Our Story</a>
+        <a href="#team" class="btn-secondary">Meet the Team</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="logo_369170_1752171749.jpg" alt="Vizio Community tech team collaborating in modern workspace" loading="lazy">
+    </div>
+  </section>
+
+  <!-- Our Story Section -->
+  <section id="our-story" class="story-section">
+    <div class="container">
+      <h2>Our Story</h2>
+      <div class="story-content">
+        <div class="story-text">
+          <p>We're a community of innovators, creators, and tech enthusiasts who come together to inspire and support each other.</p>
+          <p>Explore our marketplace for cutting-edge technology products, custom prints, and more. Join us in shaping the future!</p>
+        </div>
+        <div class="story-image">
+          <img src="logo_369170_1752171749.jpg" alt="Vizio Community workspace">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section id="team" class="team-section">
+    <div class="container">
+      <h2>Meet Our Team</h2>
+      <div class="team-grid">
+        <div class="team-member" itemscope itemtype="https://schema.org/Person">
+          <img src="bliss.jpg" alt="Alex Johnson, Founder of Vizio Community" itemprop="image" loading="lazy">
+          <h3 itemprop="name">Bliss Charoedza</h3>
+          <p itemprop="jobTitle">Founder & CEO</p>
+          <meta itemprop="worksFor" content="Vizio Community">
+        </div>
+        <div class="team-member">
+          <img src="assets/team/sarah.jpg" alt="Sarah Williams">
+          <h3>Sarah Williams</h3>
+          <p>Community Manager</p>
+        </div>
+        <div class="team-member">
+          <img src="assets/team/michael.jpg" alt="Michael Chen">
+          <h3>Michael Chen</h3>
+          <p>Tech Lead</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+      <p>&copy; 2025 Vizio Community. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Page load handler
+    document.addEventListener('DOMContentLoaded', function() {
+      // Add loaded class when page is ready
+      document.documentElement.classList.add('loaded');
+      
+      // Mobile Menu Toggle
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.nav-links');
+      
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+
+      // Smooth scrolling
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+
+      // Team member hover effects
+      const teamMembers = document.querySelectorAll('.team-member');
+      teamMembers.forEach(member => {
+        member.addEventListener('mouseenter', () => {
+          member.style.transform = 'translateY(-5px)';
+          member.style.boxShadow = '0 10px 20px rgba(0,0,0,0.1)';
+        });
+        member.addEventListener('mouseleave', () => {
+          member.style.transform = 'none';
+          member.style.boxShadow = 'none';
+        });
+      });
+    });
+
+    // Preload critical images
+    const images = ['about-hero.jpg', 'community-space.jpg', 'team/alex.jpg'];
+    images.forEach(img => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.as = 'image';
+      link.href = `assets/${img}`;
+      document.head.appendChild(link);
+    });
+  </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Vizio Community",
+  "url": "https://smiley-bc.github.io/vizio-community/",
+  "logo": "https://smiley-bc.github.io/vizio-community/logo.png",
+  "description": "Technology innovation hub connecting creators and developers",
+  "sameAs": [
+    "https://twitter.com/viziocommunity",
+    "https://linkedin.com/charoedza-bliss"
+  ],
+  "foundingDate": "2025",
+  "founders": [
+    {
+      "@type": "Person",
+      "name": "Bliss Charoedza"
+    }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "N479B Area C Dangamvura",
+    "addressRegion": "Mutare, Manicaland",
+    "postalCode": "263",
+    "addressCountry": "Zimbabwe"
+  }
+}
+</script>
+</body>
+</html>
