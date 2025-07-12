@@ -10,38 +10,106 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <header class="hero">
         <img src="logo_369170_1752171749.jpg" alt="Vizio Community Logo" class="logo">
         <h1>Welcome to Vizio Community</h1>
-        <p>A vibrant tech hub where like-minded individuals share their dreams and passions!</p>
+        <p class="tagline">A vibrant tech hub where like-minded individuals share their dreams and passions!</p>
+        <p>We're a community of innovators, creators, and tech enthusiasts who come together to inspire and support each other. Join us in shaping the future, one idea at a time!</p>
+        <a href="#contact" class="cta-button">Join Our Community</a>
     </header>
     
     <nav>
         <ul>
+            <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <section id="services">
+    <section id="services" class="services-section">
         <h2>Our Services</h2>
-        <ul>
-            <li>Printing and Photocopying: $0.03 per page</li>
-            <li>Website Development</li>
-            <li>SEO Generation</li>
-        </ul>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Printing Services</h3>
+                <p>High quality printing at $0.03 per page</p>
+                <ul>
+                    <li>Document printing</li>
+                    <li>Photocopying</li>
+                    <li>Business cards</li>
+                    <li>Flyers & brochures</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3>Web Development</h3>
+                <p>Custom websites for your business</p>
+                <ul>
+                    <li>Responsive design</li>
+                    <li>E-commerce solutions</li>
+                    <li>Web applications</li>
+                    <li>Maintenance</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3>Digital Marketing</h3>
+                <p>Boost your online presence</p>
+                <ul>
+                    <li>SEO optimization</li>
+                    <li>Social media management</li>
+                    <li>Content creation</li>
+                    <li>Paid advertising</li>
+                </ul>
+            </div>
+        </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Phone: <a href="tel:+26780709947">078 070 9947</a></p>
-        <p>Email: <a href="mailto:bscharoedza@gmail.com">bscharoedza@gmail.com</a></p>
-        <p>Website: <a href="https://smiley-bc.github.io/my-portfolio/" target="_blank">smiley-bc.github.io/my-portfolio/</a></p>
-        <p>Address: N479B AREA C DANGAMVURA MUTARE</p>
+    <section id="contact" class="contact-section">
+        <h2>Get In Touch</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p><strong>Phone:</strong> <a href="tel:+26780709947">078 070 9947</a></p>
+                <p><strong>Email:</strong> <a href="mailto:bscharoedza@gmail.com">bscharoedza@gmail.com</a></p>
+                <p><strong>Address:</strong> N479B AREA C DANGAMVURA MUTARE</p>
+                <div class="social-links">
+                    <a href="#" target="_blank">Facebook</a>
+                    <a href="#" target="_blank">Twitter</a>
+                    <a href="#" target="_blank">Instagram</a>
+                </div>
+            </div>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <input type="tel" placeholder="Phone Number">
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 Vizio Community. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About Vizio</h3>
+                <p>We're a community of tech enthusiasts committed to innovation and digital empowerment.</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact</h3>
+                <p><a href="tel:+26780709947">078 070 9947</a></p>
+                <p><a href="mailto:bscharoedza@gmail.com">bscharoedza@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Vizio Community. All rights reserved.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
